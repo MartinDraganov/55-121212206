@@ -1,6 +1,27 @@
-*.class
+package martin;
 
-# Package Files #
-*.jar
-*.war
-*.ear
+import java.util.Scanner;
+public class martin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner (System.in);
+		System.out.print("Enter first value(A):\t");
+		int firstValue = scan.nextInt();
+		System.out.print("Enter second value(B):\t");
+		int secondValue = scan.nextInt();
+		System.out.print("Enter third value(C):\t");
+		int thirdValue = scan.nextInt();
+		int counter = 1;
+		
+		for (int x = -1000; x <= 1000; x++) {
+			for (int y = -1000; y < 1000; y++) {
+				if((firstValue * x + secondValue * y) == (-thirdValue)){
+					System.out.println(counter + " possible solution is:" + x +"; " + y);
+					counter++;
+				}
+				}
+			}
+
+		}
+	}
